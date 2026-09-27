@@ -1,0 +1,54 @@
+[gd_scene format=3 uid="uid://bnbfygddgp6n6"]
+
+[ext_resource type="Script" uid="uid://n8sds8anjcop" path="res://player_1.gd" id="1_80nbo"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_mwb40"]
+specular_color = Color(0.77695286, 0.49924988, 0.8081415, 1)
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_80nbo"]
+specular_color = Color(0, 0, 0, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mwb40"]
+size = Vector2(1, 1)
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_e2o6t"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_80nbo"]
+size = Vector2(1, 1)
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_feb5d"]
+
+[node name="Node2D" type="Node2D" unique_id=398223555]
+
+[node name="map" type="Sprite2D" parent="." unique_id=1476109028]
+modulate = Color(0.15635765, 1.763992e-05, 0.1565946, 1)
+scale = Vector2(117, 66)
+texture = SubResource("CanvasTexture_mwb40")
+
+[node name="Player1" type="Sprite2D" parent="." unique_id=2087763522]
+modulate = Color(0.9392054, 0.19661447, 0.9812195, 1)
+position = Vector2(50, 0)
+scale = Vector2(1, 15)
+texture = SubResource("CanvasTexture_80nbo")
+script = ExtResource("1_80nbo")
+
+[node name="Collision1" type="CollisionShape2D" parent="Player1" unique_id=1048532296]
+position = Vector2(-100, 0)
+shape = SubResource("RectangleShape2D_mwb40")
+
+[node name="Player2" type="Sprite2D" parent="." unique_id=1783055980]
+modulate = Color(0.9392054, 0.19661447, 0.9812195, 1)
+position = Vector2(-50, 0)
+scale = Vector2(1, 15)
+texture = SubResource("CanvasTexture_e2o6t")
+
+[node name="Collision2" type="CollisionShape2D" parent="Player2" unique_id=751653788]
+position = Vector2(100, 0)
+shape = SubResource("RectangleShape2D_80nbo")
+
+[node name="Ball" type="Sprite2D" parent="." unique_id=926769054]
+modulate = Color(1, 0.10980392, 1, 1)
+texture = SubResource("CanvasTexture_feb5d")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=165581506]
+zoom = Vector2(11, 11)
